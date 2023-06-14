@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+
+{% block head %}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="NkNCSjW0hREvmvNhWX7gaFLspZoXjJYt0OZDCmbTCJc" />
+    <title>Prairie Code LLC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/lightbox.css' %}" rel="stylesheet" type="text/css">
+</head>
+{% endblock %}
+{% block body_settings %}
+
+<body>
+    {% endblock %}
+
+    {% block navigation %}
+    <nav class="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home:home' %}">
+                <span class="navbar-brand mb-0 h1">Prairie Code</span>
+            </a>
+
+            <div class="float-end">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path
+                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                </svg>
+                &nbsp;
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-instagram" viewBox="0 0 16 16">
+                    <path
+                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                </svg>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg p-2" id="navbar_main">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg>
+
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto p-2">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{% url 'home:about_us' %}">About
+                            Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home:our_work' %}">Our
+                            Work</a>
+                    </li>
+                    <li class=" nav-item">
+                        <a class="nav-link" href="{% url 'home:our_process' %}">Our
+                            Process</a>
+                    </li>
+                    <li class=" nav-item">
+                        <a class="nav-link" href="{% url 'home:testimonials' %}">Testimonials</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    {% endblock %}
+
+    {% block mainbody %}
+
+    <section id="intro">
+        <!-- section that serves for an introduction. -->
+        <!-- Content here -->
+        <div id="intro-container" class="container-fluid">
+
+            <h1 id="main_header" class="display-2">
+                Create & Grow Your
+                Website Today With
+                Prairie Code!</h1>
+
+            <a role="button" class="btn btn-light p-3" id="main_button" href="{% url 'Home:home' %}#contact_us"
+                target="_top">Start
+                Today</a>
+
+        </div>
+    </section>
+    <section id="captions">
+        <div class="row justify-content-between">
+            <div class="col-sm text-center facet">
+                <div class="container-fluid  p-3 facet-header">
+                    <h2 class="header">Intuition</h2>
+                </div>
+                <img src="../static/brain.png" width="100" height="100" class="p-2">
+                <p class="lead p-5 text-white" style="font-weight: bold;">Through each project that we have built we
+                    have gained new
+                    insight in how
+                    we can
+                    create
+                    the web application of your dreams.</p>
+            </div>
+
+            <div class="col-sm text-center facet">
+                <div class="container-fluid p-3 facet-header">
+                    <h2 class="header">Inspiration</h2>
+                </div>
+                <img src="../static/fire.png" width="100" height="100" class="p-2">
+                <p class="lead p-5  text-white" style="font-weight: bold;">Our inspiration is our client, we take our
+                    time to understand yourself
+                    as well as
+                    your companies mission, goals and values. We take all of this and we turn it into our source of
+                    inspiration in order to build the product of your dreams.</p>
+
+            </div>
+
+            <div class="col-sm text-center facet">
+                <div class="container-fluid  p-3 facet-header">
+                    <h2 class="header">Innovation</h2>
+                </div>
+                <img src="../static/lightbulb.png" width="100" height="100" class="p-2">
+                <p class="lead p-5 text-white" style="font-weight: bold;">We are constantly utilizing the latest and
+                    greatest technologies and
+                    discovering new
+                    ways as to how we can greater improve the performance of our applications. </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about_us">
+        <div class="row justify-content-between">
+            <div class="col-sm text-center p-5" style="align-items: center; justify-content: center;">
+                <h1 class="heading" style="color: white; font-family: April; font-weight: bold;">Our Story</h1>
+                <p class="lead p-2 text-white m-1" style="font-weight: bold;">Hello my name is Juan
+                    Lizarraga-Cortez, I
+                    am a recent graduate of the
+                    University Of
+                    Nebraska - Omaha.
+                    After having recieved my bachelors in Computer Science, I recognized that web development was the
+                    career
+                    choice that I wanted to pursue. I have always loved solving problems and armed with my resolve and
+                    entreprenurial spirit, I decided to venture out on my own. This is when Prairie Code LLC was
+                    born.</p>
+
+
+                <h2 style="font-family: Jazz LET, fantasy; font-weight: bold;" class="text-white pt-5">Juan L.</h2>
+            </div>
+
+            <div class="col-sm-5">
+
+            </div>
+        </div>
+
+    </section>
+
+    <section id="our_technologies" class="bg-light">
+        <div class="row jusitfy-content-between p-3">
+            <div class="col-sm text-center">
+                <h1 style="font-family: April; font-weight: bold; text-decoration: underline; text-underline-position: under; width: 100%;"
+                    class="pt-3">
+                    Powered by the latest and
+                    greatest!</h1>
+                <p class="lead m-5" style="font-weight: bold;">These are the technologies that we utilize in order to
+                    power
+                    our business. I am committed to keeping myself updated and continue to evolve by keeping up with the
+                    latest and greatest.</p>
+            </div>
+
+            <div class="col-sm">
+
+                <!-- row for Django, Vue.js and Python. -->
+                <div class="row justify-content-between text-center">
+                    <div class="col-sm p-3" style="height: 15vh;">
+                        <img src="../static/django.jpeg" style="height: 100%; width: auto;">
+                    </div>
+
+                    <div class="col-sm p-3" style="height: 15vh;">
+                        <img src="../static/vue.js.png" style="height: 100%; width: auto;">
+                    </div>
+
+                    <div class="col-sm p-3" style="height: 15vh">
+                        <img src="../static/python.png" style="height: 100%; width: auto;">
+                    </div>
+
+                </div>
+
+                <!-- row for HTML5, CSS3 and JavaScript  -->
+                <div class="row justify-content-between text-center">
+                    <div class="col-sm p-3" style="height: 15vh;">
+                        <img src="../static/html5.png" style="height: 90%; width: auto; position: relative;">
+                    </div>
+
+                    <div class="col-sm p-3" style="height: 15vh;">
+                        <img src="../static/css3.png" style="height: 100%; width: auto;">
+                    </div>
+
+                    <div class="col-sm p-3" style="height: 15vh">
+                        <img src="../static/javascript.png" style="height: 100%; width: auto;">
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-between text-center ml-3">
+                    <div class="col-sm p-3 m-2" style="height: 15vh;">
+                        <img src="../static/google_cloud.png" style="height: 100%; width: auto; position: relative;">
+                    </div>
+
+                    <div class="col-sm p-3 m-3" style="height: 15vh;">
+                        <img src="../static/mysql.png" style="height: 100%; width: auto;">
+                    </div>
+
+                    <div class="col-sm p-5" style="height: 15vh">
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact_us">
+        <div class="row justify-content-between">
+            <div class="col-sm text-center p-5" id="contact_form">
+
+                <h1 style="font-family: April; font-weight: bold; color: white;">Ready To Get To Work?</h1>
+                <p class="lead text-white">Simply fill out the form below, and we will be in touch soon.</p>
+            </div>
+        </div>
+
+        <div class="row justify-content-between">
+            <div class="col-sm" id="contact_form">
+            </div>
+
+            <div class="col-sm p-5" id="contact_form">
+                <form method="post" id="contact_us" name="contact_us">
+                    {% csrf_token %}
+                    <div class="form-group col-sm p-2">
+                        <input type="text" id="id_name" class="form-control form-control-lg" placeholder="Name">
+                    </div>
+
+                    <div class="form-group col-sm p-2">
+                        <input type="email" id="id_email" class="form-control form-control-lg" placeholder="Email">
+                    </div>
+
+                    <div class="form-group col-sm p-2">
+                        <textarea id="id_details" class="form-control form-control-lg" placeholder="How Can We Help?"
+                            cols="4" rows="5"></textarea>
+                    </div>
+
+                    <div class="form-group col-sm">
+                        <button type="submit" class="btn btn-light p-3" id="form_submit">Submit</button>
+                    </div>
+
+
+                </form>
+
+            </div>
+
+            <div class="col-sm" id="contact_form">
+            </div>
+
+        </div>
+
+    </section>
+
+    {% endblock %}
+
+    {% block footer %}
+
+    <footer class="text-lg-start bg-light text-muted">
+
+        <!-- create a responsive flexbox container for creating a row.  -->
+        <section class="p-3 text-center border-top border-bottom" id="social_links">
+            <p class="fw-bold lead">Call today to schedule your free consultation!</p>
+        </section>
+
+        <section class="d-flex justify-content-center p-4" id="main_footer_content">
+
+            <div class="row justify-content-center mt-5" style="text-align: left; color: white;">
+
+                <div class="col-sm m-0 w-50" style="margin: 10%;">
+
+                    <!-- add the resources links -->
+                    <h5 class="text-uppercase text-md-auto fw-bold mb-3 text-decoration-underline m-1">
+                        Resources</h5>
+
+                    <p class="fw-bold m-1">
+                        <a href="{% url 'home:about_us' %}" class="text-reset text-decoration-none">About Us</a>
+
+                    </p>
+
+                    <p class="fw-bold m-1">
+                        <a href="{% url 'home:our_process' %}" class="text-reset text-decoration-none">Our Process</a>
+
+                    </p>
+
+                    <p class="fw-bold m-1">
+                        <a href="{% url 'home:our_work' %}" class="text-reset text-decoration-none">Our Work</a>
+
+                    </p>
+
+                    <p class="fw-bold m-1">
+                        <a href="#" class="text-reset text-decoration-none">Testimonials</a>
+
+                    </p>
+
+                </div>
+
+                <div class="col-sm m-0  w-50" style="margin: 10%;">
+
+                    <!-- add the resources links -->
+                    <h5 class="text-uppercase text-md-auto fw-bold mb-3 text-decoration-underline m-1">
+                        Contact Us</h5>
+
+                    <p class="fw-bold m-1 text-white">
+                        (712)-796-7187
+
+                    </p>
+
+                    <p class="fw-bold m-1">
+                        prairiecodellc@gmail.com
+
+                    </p>
+
+                    <p class="fw-bold m-1">
+                        prairiecode.net
+
+                    </p>
+
+                    <p class="fw-bold m-1">
+
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- copyright section -->
+        <section class="d-flex justify-content-center p-2" id="footer_trademark">
+            <div class="row m-2">
+                <p class="lead">@Prairie Code LLC</p>
+            </div>
+        </section>
+    </footer>
+    {% endblock %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+</body>
+
+
+
+
+</html>

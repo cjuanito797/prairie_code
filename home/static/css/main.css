@@ -1,0 +1,116 @@
+ html {
+ width: 100%;
+ height: 100%;
+ margin: 0px;
+ overflow-x: hidden;
+
+ }
+
+ body {
+     width: 100%;
+     height: 100%;
+     margin: 0px;
+     overflow-x: hidden;
+     display: flex;
+     flex-direction: column;
+ }
+
+ footer {
+     margin-top: auto;
+ }
+
+#intro {
+    padding-top: 10%;
+    flex-shrink: 0;
+    height: 85vh;
+    background-image: url("https://iowaphotos.com/wp-content/uploads/2020/01/773A1250.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.navbar {
+    background-color: #877760;
+}
+
+#navbar_main {
+    background-color: #DFCAAD;
+}
+
+#intro-container{
+    text-align: center;
+    width: 100%;
+    align-items: center;
+}
+
+#main_header {
+    font-family: April;
+    font-weight: bold;
+    color: white;
+}
+
+#main_button {
+    width: 350px;
+    height: 75px;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: April;
+}
+
+.facet {
+    background-color: #ACB0B5;
+    border-right: 3px solid white;
+    border-bottom: 5px solid white;
+
+}
+
+.facet-header {
+    background-color: #ACB0B5;
+    width: 100%;
+}
+
+.header {
+    color: white;
+    font-weight: bold;
+    font-family: April;
+}
+
+#about_us {
+    border-top: 3px solid white;
+    background-color: #B4A4A4;
+}
+
+#about_us h1 {
+    font-family: 'Abril';
+    font-weight: bold;
+    color: white;
+}
+
+#contact_us {
+    padding-bottom: 2%;
+}
+#contact_form {
+    background-color: #445C64;
+
+
+
+}
+
+#form_submit {
+    width: 50%;
+    margin-left: 25%;
+    font-weight: bold;
+}
+
+#social_links {
+    background-color: #ACB0B5;
+}
+
+#main_footer_content {
+    background-color: #B4A4A4;
+}
+
+#footer_trademark {
+    background-color: #ACB0B5;
+
+
+}
