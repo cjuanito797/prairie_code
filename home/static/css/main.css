@@ -114,3 +114,26 @@
 
 
 }
+
+
+.image_container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35vw, 1fr));
+    grid-gap: 15px;
+}
+
+.gallery img {
+    border-radius: 5px;
+    width: 95%;
+    height: 85%;
+}
