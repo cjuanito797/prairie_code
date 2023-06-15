@@ -148,10 +148,12 @@ html {
 }
 
 a:hover{
-    border-radius: 5px;
-    background-color: white;
+    text-decoration: underline;
 }
 
+.navbar-brand {
+    font-size: 25px;
+}
 
 .process_icon {
     display: inline-block;
