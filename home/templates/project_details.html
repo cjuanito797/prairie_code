@@ -6,7 +6,7 @@
 <div class="row justify-content-between pt-5">
 
     <div class="col-sm ml-5">
-        <a href="{% url 'Home:our_work' %}" style="color: white;" class="ml-5">
+        <a href="{% url 'Home:our_work' %}" class="ml-5">
 
             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                 class="bi bi-grid-3x3-gap" viewBox="0 0 16 16">
@@ -20,7 +20,7 @@
 
     <div class="col-sm">
         <div class="section-header text-center pb-5">
-            <h1 style="color: white;">{{project.name}}</h1>
+            <h1>{{project.name}}</h1>
 
         </div>
         <!-- insert the thumbnail -->
@@ -33,19 +33,19 @@
         </div>
 
         <section class="caption p-3 m-5">
-            <h1 style="color: white">About this project</h1>
-            <p class="lead" style="color: white;">{{project.motivation|linebreaksbr}}</p>
+            <h1>About this project</h1>
+            <p class="lead">{{project.motivation|linebreaksbr}}</p>
         </section>
 
         <section class="caption p-3 m-5">
-            <h1 style="color: white">What this project can do.</h1>
-            <p class="lead" style="color: white;">{{project.capabilities|linebreaksbr}}</p>
+            <h1>What this project can do.</h1>
+            <p class="lead">{{project.capabilities|linebreaksbr}}</p>
         </section>
 
 
         <section class="caption p-3 m-5">
-            <h1 style="color: white">Skills & Technologies Utilized</h1>
-            <ul style="color: white; font-size: 22px;">
+            <h1>Skills & Technologies Utilized</h1>
+            <ul>
                 <li>HTML5</li>
                 <li>Bootstrap CSS</li>
                 <li>Django Web Framework</li>
@@ -55,8 +55,8 @@
         </section>
 
         <section class="my_contributions p-3 m-5">
-            <h1 style="color: white;">My Contributions</h1>
-            <p class="lead" style="color: white;">{{project.my_contributions|linebreaksbr}}</p>
+            <h1>My Contributions</h1>
+            <p class="lead">{{project.my_contributions|linebreaksbr}}</p>
         </section>
 
 
@@ -72,7 +72,7 @@
 
 
     <section class="section-header text-center">
-        <h1 style="color: white;">Project Gallery</h1>
+        <h1>Project Gallery</h1>
     </section>
     <section class="image_container">
         <div class="gallery">
