@@ -13,7 +13,6 @@
      overflow-x: hidden;
      display: flex;
      flex-direction: column;
-     background-color: #ACB0B5;
  }
 
  footer {
@@ -111,11 +110,6 @@
     background-color: #B4A4A4;
 }
 
-#footer_trademark {
-    background-color: #ACB0B5;
-
-
-}
 
 
 .image_container {
@@ -138,4 +132,25 @@
     border-radius: 5px;
     width: 95%;
     height: 85%;
+}
+
+.heading {
+    color: #877760;
+    font-family: 'April';
+    font-weight: bold;
+}
+
+.process_icon {
+    display: inline-block;
+}
+
+p {
+    font-weight: bold;
+    font-family: 'April';
+    font-size: 17px;
+}
+
+a {
+    font-family: 'April';
+
 }

@@ -159,15 +159,8 @@ CSP_FONT_SRC = [
 
 CSP_IMG_SRC = [
     "'self'",
-    "https://www.everlastsiding.com/",
-    "https://scontent-dfw5-1.xx.fbcdn.net/v/",
-    "https://images.trex.com/is/image/trexcompany/",
-    "https://pacificshorestones.com/wp-content/",
     "https://cdnassets.hw.net/",
     "http://www.w3.org/2000/svg",
-    "https://west-south.com/wp-content/",
-    "https://static.vecteezy.com/",
-    "https://www.woodstairs.com/",
     "data:"
 ]
 
