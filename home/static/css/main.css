@@ -17,9 +17,10 @@ html {
  }
 
  footer {
-     border-top: 1px solid black;
+     border-top: 3px solid white;
      margin-top: auto;
-     background-color: #DFBD69;
+     background-color: #ACB0B5;
+     color: white;
  }
 
 #intro {
