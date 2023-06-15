@@ -154,9 +154,10 @@ a:hover{
 
 
 .process_icon {
-    border-left: 1px solid black;
-    border-right: 1px solid black;
     display: inline-block;
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
 }
 
 p {
