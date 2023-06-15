@@ -141,13 +141,17 @@ html {
     font-weight: bold;
 }
 
-.nav-item {
-    border-left: 1px solid black;
+.nav-link {
+    text-align: center;
+    font-weight: bold;
+    padding: 15%;
 }
 
-.last-nav {
-    border-right: 1px solid black;
+a:hover{
+    border-radius: 5px;
+    background-color: white;
 }
+
 
 .process_icon {
     display: inline-block;
