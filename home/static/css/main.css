@@ -1,8 +1,9 @@
- html {
- width: 100%;
- height: 100%;
- margin: 0px;
- overflow-x: hidden;
+
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    overflow-x: hidden;
 
  }
 
@@ -138,6 +139,14 @@
     color: #877760;
     font-family: 'April';
     font-weight: bold;
+}
+
+.nav-item {
+    border-left: 1px solid black;
+}
+
+.last-nav {
+    border-right: 1px solid black;
 }
 
 .process_icon {
