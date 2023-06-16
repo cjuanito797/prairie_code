@@ -197,7 +197,7 @@ a {
 }
 
 
-@media (max-width: 990px)
+@media (max-width: 1199px)
 {
     html {
         width: 100%;
@@ -206,8 +206,16 @@ a {
         overflow-x: hidden;
     }
 
-    .navbar {
+    #nav_brand {
         background-color: white;
 
+    }
+
+    #nav_brand.collapse {
+        background-color: white;
+    }
+
+    #navbarNav {
+        background-color: white;
     }
 }
