@@ -17,6 +17,7 @@ html {
      background-position: center center;
      background-repeat: no-repeat;
      background-size: cover;
+     overflow-y: scroll;
 
  }
 
@@ -36,11 +37,13 @@ html {
 }
 
 .navbar {
+    padding-right: 0;
     top: 0;
 
 }
 
 #navbar_main {
+    padding-right: 0;
     margin-top: 60px;
 }
 
