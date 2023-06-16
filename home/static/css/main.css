@@ -165,6 +165,13 @@ a:hover{
     font-size: 25px;
 }
 
+.bgColor {
+    background-color: white;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+}
+
 .process_icon {
     display: inline-block;
     text-align: center;
