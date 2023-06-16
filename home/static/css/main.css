@@ -21,6 +21,11 @@ html {
 
  }
 
+ h1 {
+     font-family: 'April';
+     font-weight: bold;
+ }
+
  footer {
      border-top: 3px solid white;
      margin-top: auto;
