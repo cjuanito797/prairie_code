@@ -37,6 +37,7 @@ html {
 
 .navbar {
     top: 0;
+
 }
 
 #navbar_main {
@@ -172,6 +173,13 @@ p {
 }
 
 a {
+    font-size: 25px;
     font-family: 'April';
 
+}
+
+.nav-link {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
 }
