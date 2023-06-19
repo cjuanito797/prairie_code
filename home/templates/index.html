@@ -27,12 +27,10 @@
             <a class="navbar-brand" href="{% url 'home:home' %}">
                 <span class="navbar-brand mb-0 h1">Prairie Code LLC</span>
             </a>
+
         </div>
 
         <br>
-
-
-
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 
@@ -47,25 +45,38 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
+                    <li class="nav-item m-4 p-1">
                         <a class="nav-link" aria-current="page" href="{% url 'home:about_us' %}">About
                             Us</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item m-4 p-1">
                         <a class="nav-link" href="{% url 'home:our_work' %}">Our
                             Work</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item m-4 p-1">
                         <a class="nav-link" href="{% url 'home:our_process' %}">Our
                             Process</a>
                     </li>
-                    <li class="nav-item last-nav">
+                    <li class="nav-item m-4 p-1">
                         <a class="nav-link" href="{% url 'home:testimonials' %}">Testimonials</a>
+                    </li>
+
+                    <li class="nav-item m-4 p-1">
+                        <a class="nav-link" href="{% url 'home:testimonials' %}">FAQ</a>
+                    </li>
+
+                    <li class="nav-item m-4 p-1">
+                        <a class="nav-link" href="{% url 'home:testimonials' %}">Contact Us</a>
                     </li>
 
                 </ul>
             </div>
+
+
+
         </div>
+
+
     </nav>
 
     {% endblock %}
