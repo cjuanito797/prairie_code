@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import quoteForm
 # Create your views here.
 from .models import *
@@ -59,19 +59,17 @@ def home(request):
 
             send_mail(
                 "A New Quote Has Been Created",
-                "Hello, We Appreciate you for reaching out to us. A representative will soon reach out to you.",
+                "Hello Juan, this is your code speaking. We have just gotten wind of a new lead submittal. ",
                 "Don't Reply <do_not_reply@domain.example>",
                 ['prairiecodellc@gmail.com'],
                 fail_silently=False,
               )
 
-
-
-
             form = quoteForm()
+
+            return redirect('Home:home')
 
     else:
         form = quoteForm()
-
 
     return render(request, "index.html", {'form': form})
