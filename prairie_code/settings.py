@@ -127,6 +127,19 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+# SMTP Configutation
+# SMTP Configuration
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'prairiecodellc@gmail.com'
+EMAIL_HOST_PASSWORD = 'hexeyvmtspkiflzv'
+EMAIL_USE_SSL = False
+
+DEFAULT_FROM_EMAIL = 'prairiecodellc@gmail.com'
+SERVER_EMAIL = 'prairiecodellc@gmail.com'
+
 # Add to project/settings.py
 SECURE_HSTS_SECONDS = 2592000  # Unit is seconds; *USE A SMALL VALUE FOR TESTING!*
 SECURE_HSTS_PRELOAD = True
