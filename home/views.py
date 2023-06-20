@@ -50,11 +50,11 @@ def home(request):
         if form.is_valid():
             # do form processing such as sending out the e-mail.
             send_mail(
-                 "Thank You For Choosing Prairie Code LLC",
-                 "Hello, We Appreciate you for reaching out to us. A representative will soon reach out to you.",
-                 "Don't Reply <do_not_reply@domain.example>",
-                 [form.cleaned_data['email']],
-                 fail_silently=False,
+                "Thank You For Choosing Prairie Code LLC",
+                "Hello, We Appreciate you for reaching out to us. A representative will soon reach out to you.",
+                "Don't Reply <do_not_reply@domain.example>",
+                [form.cleaned_data['email']],
+                fail_silently=False,
              )
 
             plaintext = get_template("email/admin_confirmation.txt")
