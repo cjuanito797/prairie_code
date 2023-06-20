@@ -1,0 +1,2 @@
+Hello Juan, this is your code speaking. We are just getting wind of a new lead submitted by {{user}}, their email is {{email}}. And they placed this within the
+contents of the form. "{{details}}"

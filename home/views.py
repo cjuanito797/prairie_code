@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
+from django.template.loader import get_template
 from .forms import quoteForm
 # Create your views here.
 from .models import *
-from django.core.mail import send_mail
+from django.core.mail import send_mail, EmailMultiAlternatives
 # Create your views here.
 
 def about_us(request):
@@ -40,7 +41,6 @@ def project_details(request, pk):
 
 
 def home(request):
-
     # render the form, and send out a confirmation e-mail with a "Do Not Reply Heading". Send e-mail to self as well.
 
     if request.method == 'POST':
@@ -57,13 +57,18 @@ def home(request):
                  fail_silently=False,
              )
 
-            send_mail(
-                "A New Quote Has Been Created",
-                "Hello Juan, this is your code speaking. We have just gotten wind of a new lead submittal. ",
-                "Don't Reply <do_not_reply@domain.example>",
-                ['prairiecodellc@gmail.com'],
-                fail_silently=False,
-              )
+            plaintext = get_template("email/admin_confirmation.txt")
+            content = ({
+                 'user': form.cleaned_data['name'],
+                 'email': form.cleaned_data['email'],
+                 'details': form.cleaned_data['details']
+             })
+
+            text_content = plaintext.render(content)
+
+
+            msg = EmailMultiAlternatives("A New Quote Has Been Created", text_content, "Don't Reply <do_not_reply@domain.example>", ['prairiecodellc@gmail.com'])
+            msg.send()
 
             form = quoteForm()
 
