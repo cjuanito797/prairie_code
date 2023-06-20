@@ -57,7 +57,7 @@ def home(request):
                  fail_silently=False,
              )
 
-            plaintext = get_template("email/admin_confirmation.txt")
+            plaintext = get_template("home/email/admin_confirmation.txt")
             content = ({
                  'user': form.cleaned_data['name'],
                  'email': form.cleaned_data['email'],
