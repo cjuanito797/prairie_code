@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.template.loader import get_template
 from .forms import quoteForm
 # Create your views here.
+from django import forms
 from .models import *
 from django.core.mail import send_mail, EmailMultiAlternatives
 # Create your views here.
@@ -39,14 +40,6 @@ def project_details(request, pk):
     return render(request, "project_details.html", {'project': project, 'images': images, 'link': link})
 
 
-def check_for_spam(details):
-    common_spam_keywords = ["href"]
-    print(details)
-
-    for keyword in common_spam_keywords:
-        if keyword in details:
-            print("Found a spam keyword, can't send e-mail.")
-            return 1
 
 
 def home(request):
@@ -56,22 +49,22 @@ def home(request):
         # get the form submitted by user.
         form = quoteForm(request.POST)
 
+        # check for spam first.
+
         if form.is_valid():
             # do form processing such as sending out the e-mail.
             #
 
-            # before we can send out the mail we need to make sure that, the details of the form does not contain any blacklisted forms.
+            # before we can send out the mail we need to make sure that, the details of the form does not contain any blacklisted forms
 
-
-
-            green_light = check_for_spam(form.cleaned_data['details'])
-
-            if green_light == 1:
-                # raise a form validation error.
-                print("Form error!")
-
+            if form.check_spam() == 1:
+                found_spam = 1
+                return render(request, "index.html", {'form': form, 'found_spam': found_spam})
             else:
-                send_mail(
+                found_spam = 0
+                return render(request, "index.html", {'form': form, 'found_spam': found_spam})
+
+            send_mail(
                     "Thank You For Choosing Prairie Code LLC",
                     "Hello, We Appreciate you for reaching out to us. A representative will soon reach out to you.",
                     "Don't Reply <do_not_reply@domain.example>",
@@ -79,24 +72,25 @@ def home(request):
                     fail_silently=False,
                 )
 
-                plaintext = get_template("email/admin_confirmation.txt")
-                content = ({
+            plaintext = get_template("email/admin_confirmation.txt")
+            content = ({
                     'user': form.cleaned_data['name'],
                     'email': form.cleaned_data['email'],
                     'details': form.cleaned_data['details']
                 })
 
-                text_content = plaintext.render(content)
+            text_content = plaintext.render(content)
 
 
-                msg = EmailMultiAlternatives("A New Quote Has Been Created", text_content, "Don't Reply <do_not_reply@domain.example>", ['prairiecodellc@gmail.com'])
-                msg.send()
+            msg = EmailMultiAlternatives("A New Quote Has Been Created", text_content, "Don't Reply <do_not_reply@domain.example>", ['prairiecodellc@gmail.com'])
+            msg.send()
 
-                form = quoteForm()
+            form = quoteForm()
 
             return redirect('Home:home')
 
     else:
-        form = quoteForm()
+        # print out the form error in the template itself.
 
-    return render(request, "index.html", {'form': form})
+        form = quoteForm()
+    return render(request, "index.html", {'form': form, })

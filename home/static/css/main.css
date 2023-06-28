@@ -38,15 +38,38 @@ html {
     background-size: cover;
 }
 
-
-#navbar_main {
-    margin-top: 40px;
+#brand {
+    display: inline-block;
+    font-family: none;
 }
 
-#nav_brand.scrolled {
-    background-color: #fff;
-    transition: background-color 200ms linear;
+.navbar-brand {
+    font-size: 25px;
+    color: black;
+    border-top: 3px solid black;
+    font-family: 'Abril';
+
 }
+
+#brand-heading {
+    text-align: center;
+}
+
+#brand-heading h4 {
+    font-weight: bold;
+}
+
+#brand-text {
+    text-align: center;
+    color: black;
+    width: 100%;
+    font-size: 17px;
+    font-weight: bold;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+    padding: 1%;
+}
+
 
 
 #intro-container{
@@ -150,19 +173,12 @@ html {
     font-weight: bold;
 }
 
-.nav-link {
-    text-align: center;
-    font-weight: bold;
-    padding: 5%;
-}
+
 
 a:hover{
     text-decoration: underline;
 }
 
-.navbar-brand {
-    font-size: 25px;
-}
 
 .bgColor {
     background-color: white;
@@ -197,6 +213,7 @@ a {
 }
 
 
+
 @media (max-width: 1199px)
 {
     html {
@@ -206,17 +223,7 @@ a {
         overflow-x: hidden;
     }
 
-    #nav_brand {
-        background-color: white;
-
-    }
-
-    #nav_brand.collapse {
-        background-color: white;
-    }
-
-    #navbarNav {
-        margin-top: 50px;
+    #primary-navigation{
         background-color: white;
     }
 }

@@ -1,9 +1,10 @@
 function changeBg() {
   var scrollValue = window.scrollY;
 
-  var navbar = document.getElementById('nav_brand');
+  var navbar = document.getElementById('primary-navigation');
+  console.log(scrollValue);
 
-  if (scrollValue < 150) {
+  if (scrollValue < 50) {
     navbar.classList.remove('bgColor');
 
   }
