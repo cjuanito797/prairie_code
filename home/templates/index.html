@@ -20,7 +20,9 @@
 <body>
 
     {% block navigation %}
+    {% block nav_settings %}
     <nav class="navbar navbar-expand-lg  fixed-top" id="primary-navigation">
+        {% endblock %}
         <div class="container-fluid">
             <div id="brand" class="p-3">
                 <a class="navbar-brand" href="{% url 'Home:home' %}">
