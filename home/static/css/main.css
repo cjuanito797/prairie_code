@@ -44,11 +44,11 @@ html {
 }
 
 .navbar-nav {
-    margin-left: 15%;
+    margin-left: 10%;
 }
 
 .navbar-brand {
-    font-size: 25px;
+    font-size: 22px;
     color: white;
     border-top: 3px solid black;
     font-family: 'Abril';
