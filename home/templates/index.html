@@ -22,55 +22,6 @@
 <body>
     {% endblock %}
 
-    {% block navigation %}
-    <nav class="navbar navbar-expand-lg" id="primary-navigation" style="background: transparent;">
-        <div class="container-fluid">
-            <div id="brand" class="p-2">
-                <a class="navbar-brand" href="{% url 'Home:home' %}">
-                    <div id="brand-heading" class="p-1">
-                        <h4>
-                            Prairie Code LLC
-                        </h4>
-                    </div>
-                    <div id="brand-text">
-
-                        <h7>"Systems Built For You."</h7>
-
-
-                    </div>
-                </a>
-            </div>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav text-center">
-                    <li class="nav-item m-4 p-1 text-center">
-                        <a class="nav-link text-white" aria-current="page"
-                            href="{% url 'home:about_us' %}"><strong>About
-                                Us</strong></a>
-                    </li>
-                    <li class="nav-item m-4 p-1">
-                        <a class="nav-link text-white" href="{% url 'home:our_work' %}">Our
-                            Work</a>
-                    <li class="nav-item m-4 p-1">
-                        <a class="nav-link text-white" href="{% url 'home:our_process' %}">Our
-                            Process</a>
-                    <li class="nav-item m-4 p-1">
-                        <a class="nav-link text-white" href="{% url 'home:testimonials' %}">Testimonials</a>
-                    </li>
-
-                    </li>
-
-                </ul>
-
-            </div>
-        </div>
-    </nav>
-    {% endblock %}
 
 
 
@@ -80,6 +31,56 @@
 
 
     <section id="intro">
+        {% block navigation %}
+        <nav class="navbar navbar-expand-lg" id="primary-navigation" style="background: transparent;">
+            <div class="container-fluid">
+                <div id="brand" class="p-2">
+                    <a class="navbar-brand" href="{% url 'Home:home' %}">
+                        <div id="brand-heading" class="p-1">
+                            <h4>
+                                Prairie Code LLC
+                            </h4>
+                        </div>
+                        <div id="brand-text">
+
+                            <h7>"Systems Built For You."</h7>
+
+
+                        </div>
+                    </a>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav text-center">
+                        <li class="nav-item m-4 p-1 text-center">
+                            <a class="nav-link text-white" aria-current="page"
+                                href="{% url 'home:about_us' %}"><strong>About
+                                    Us</strong></a>
+                        </li>
+                        <li class="nav-item m-4 p-1">
+                            <a class="nav-link" href="{% url 'home:our_work' %}">Our
+                                Work</a>
+                        <li class="nav-item m-4 p-1">
+                            <a class="nav-link text-white" href="{% url 'home:our_process' %}">Our
+                                Process</a>
+                        <li class="nav-item m-4 p-1">
+                            <a class="nav-link text-white" href="{% url 'home:testimonials' %}">Testimonials</a>
+                        </li>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+        {% endblock %}
+
         <!-- section that serves for an introduction. -->
         <!-- Content here -->
         <div id="intro-container" class="container-fluid pt-5 mt-4">
@@ -165,7 +166,7 @@
         </div>
 
     </section>
-    <section id="our_technologies" class="bg-light">
+    <section id="our_technologies">
         <div class="row jusitfy-content-between p-3">
             <div class="col-sm text-center">
                 <h1 style="font-family: April; font-weight: bold; text-decoration: underline; text-underline-position: under; width: 100%;"
