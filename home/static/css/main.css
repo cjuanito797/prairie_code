@@ -30,7 +30,7 @@ html {
 
 #intro {
     background-image: url("../starsBackground.jpg");
-    padding-top: 15%;
+    padding-top: 20%;
     flex-shrink: 0;
     height: 85vh;
     background-position: center center;
