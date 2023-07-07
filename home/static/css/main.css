@@ -29,8 +29,8 @@ html {
  }
 
 #intro {
-    background-image: url("../background.jpg");
-    padding-top: 10%;
+    background-image: url("../starsBackground.jpg");
+    padding-top: 15%;
     flex-shrink: 0;
     height: 85vh;
     background-position: center center;
@@ -43,9 +43,13 @@ html {
     font-family: none;
 }
 
+.navbar-nav {
+    margin-left: 15%;
+}
+
 .navbar-brand {
     font-size: 25px;
-    color: black;
+    color: white;
     border-top: 3px solid black;
     font-family: 'Abril';
 
@@ -56,17 +60,18 @@ html {
 }
 
 #brand-heading h4 {
+    color: white;
     font-weight: bold;
 }
 
 #brand-text {
     text-align: center;
-    color: black;
+    color: white;
     width: 100%;
     font-size: 17px;
     font-weight: bold;
-    border-bottom: 3px solid black;
-    border-top: 3px solid black;
+    border-bottom: 3px solid white;
+    border-top: 3px solid white;
     padding: 1%;
 }
 
@@ -181,7 +186,7 @@ a:hover{
 
 
 .bgColor {
-    background-color: white;
+    background-color: #353839;
     -webkit-transition: background-color 500ms linear;
     -ms-transition: background-color 500ms linear;
     transition: background-color 500ms linear;
@@ -207,7 +212,7 @@ a {
 }
 
 .nav-link {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     color: black;
 }
@@ -224,6 +229,6 @@ a {
     }
 
     #primary-navigation{
-        background-color: white;
+        background-color: #353839;
     }
 }
