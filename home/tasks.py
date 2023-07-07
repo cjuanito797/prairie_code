@@ -12,33 +12,27 @@ def slidingWindow():
         myDates.append(x)
     f.close()
 
-    print(myDates[0])
-    print(str(today) + "\n")
-    if (str (myDates[0]) == str (today) + '\n'):
-        # nothing to do here.
-        print("Nothing to do here moving on.")
-        myDates.clear ( )
-    else:
-        print("Moving the window one spot to the right.")
-        # append to list but first remove first value from list and get the next day that should be in our sliding window.
 
-        # delete yesterday's calendar entry.
-        # convert myDates[0] (yesterdays date into actual date)
-        yesterday = datetime.strptime (myDates[0].strip ('\n'), "%Y-%m-%d").date ( )
+    print("Moving the window one spot to the right.")
+    # append to list but first remove first value from list and get the next day that should be in our sliding window.
 
-        myDates.pop (0)
-        today = date.today()
-        nextDayInWindow = today + timedelta (days=30)
+    # delete yesterday's calendar entry.
+    # convert myDates[0] (yesterdays date into actual date)
+    yesterday = datetime.strptime (myDates[0].strip ('\n'), "%Y-%m-%d").date ( )
 
-        myDates.append (str (nextDayInWindow) + '\n')
+    myDates.pop (0)
+    today = date.today()
+    nextDayInWindow = today + timedelta (days=30)
 
-        # so with our new myDates file we can write them to our file.
+    myDates.append (str (nextDayInWindow) + '\n')
 
-        f = open ("dates.txt", "w")
+    # so with our new myDates file we can write them to our file.
 
-        for day in myDates:
-            f.write (day)
+    f = open ("dates.txt", "w")
 
-        f.close ( )
+    for day in myDates:
+        f.write (day)
 
-        myDates.clear()
+    f.close ( )
+
+    myDates.clear()

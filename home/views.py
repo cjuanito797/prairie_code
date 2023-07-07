@@ -53,7 +53,6 @@ def home(request):
 
         if form.is_valid():
             # do form processing such as sending out the e-mail.
-            #
 
             # before we can send out the mail we need to make sure that, the details of the form does not contain any blacklisted forms
 
