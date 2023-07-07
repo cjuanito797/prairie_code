@@ -14,6 +14,56 @@
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'css/lightbox.css' %}" rel="stylesheet" type="text/css">
+
+    {% block navigation %}
+    <nav class="navbar navbar-expand-lg" id="primary-navigation">
+        <div class="container-fluid">
+            <div id="brand" class="p-2">
+                <a class="navbar-brand" href="{% url 'Home:home' %}">
+                    <div id="brand-heading" class="p-1">
+                        <h4>
+                            Prairie Code LLC
+                        </h4>
+                    </div>
+                    <div id="brand-text">
+
+                        <h7>"Systems Built For You."</h7>
+
+
+                    </div>
+                </a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav text-center">
+                    <li class="nav-item m-4 p-1 text-center">
+                        <a class="nav-link text-white" aria-current="page"
+                            href="{% url 'home:about_us' %}"><strong>About
+                                Us</strong></a>
+                    </li>
+                    <li class="nav-item m-4 p-1">
+                        <a class="nav-link text-white" href="{% url 'home:our_work' %}">Our
+                            Work</a>
+                    <li class="nav-item m-4 p-1">
+                        <a class="nav-link text-white" href="{% url 'home:our_process' %}">Our
+                            Process</a>
+                    <li class="nav-item m-4 p-1">
+                        <a class="nav-link text-white" href="{% url 'home:testimonials' %}">Testimonials</a>
+                    </li>
+
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    {% endblock %}
 </head>
 {% endblock %}
 
@@ -24,55 +74,7 @@
     {% block mainbody %}
 
     <section id="intro">
-        {% block navigation %}
-        <nav class="navbar navbar-expand-lg" id="primary-navigation">
-            <div class="container-fluid">
-                <div id="brand" class="p-2">
-                    <a class="navbar-brand" href="{% url 'Home:home' %}">
-                        <div id="brand-heading" class="p-1">
-                            <h4>
-                                Prairie Code LLC
-                            </h4>
-                        </div>
-                        <div id="brand-text">
 
-                            <h7>"Systems Built For You."</h7>
-
-
-                        </div>
-                    </a>
-                </div>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav text-center">
-                        <li class="nav-item m-4 p-1 text-center">
-                            <a class="nav-link text-white" aria-current="page"
-                                href="{% url 'home:about_us' %}"><strong>About
-                                    Us</strong></a>
-                        </li>
-                        <li class="nav-item m-4 p-1">
-                            <a class="nav-link text-white" href="{% url 'home:our_work' %}">Our
-                                Work</a>
-                        <li class="nav-item m-4 p-1">
-                            <a class="nav-link text-white" href="{% url 'home:our_process' %}">Our
-                                Process</a>
-                        <li class="nav-item m-4 p-1">
-                            <a class="nav-link text-white" href="{% url 'home:testimonials' %}">Testimonials</a>
-                        </li>
-
-                        </li>
-
-                    </ul>
-
-                </div>
-            </div>
-        </nav>
-        {% endblock %}
 
         <!-- section that serves for an introduction. -->
         <!-- Content here -->
