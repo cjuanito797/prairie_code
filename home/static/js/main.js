@@ -1,3 +1,4 @@
+/*
 function changeBg() {
   var scrollValue = window.scrollY;
 
@@ -17,3 +18,4 @@ function changeBg() {
 
 
 window.addEventListener('scroll', changeBg);
+*/
