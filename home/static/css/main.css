@@ -184,12 +184,15 @@ a:hover{
 }
 
 
+/*
 .bgColor {
     background-color: #353839;
     -webkit-transition: background-color 500ms linear;
     -ms-transition: background-color 500ms linear;
     transition: background-color 500ms linear;
 }
+*/
+
 
 .process_icon {
     display: inline-block;
