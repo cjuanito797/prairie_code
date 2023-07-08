@@ -12,6 +12,10 @@ html {
      display: flex;
      flex-direction: column;
      overflow-x: hidden;
+     background-image: url("../starsBackground.jpg");
+     background-position: center center;
+     background-repeat: no-repeat;
+     background-size: cover;
 
  }
 
@@ -28,12 +32,9 @@ html {
  }
 
 #intro {
-    background-image: url("../starsBackground.jpg");
     flex-shrink: 0;
     height: 85vh;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
 }
 
 #brand {
