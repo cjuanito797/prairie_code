@@ -12,16 +12,16 @@ html {
      display: flex;
      flex-direction: column;
      overflow-x: hidden;
-     background-image: url("../starsBackground.jpg");
-     background-position: center center;
-     background-repeat: no-repeat;
-     background-size: cover;
 
  }
 
  h1 {
      font-family: 'April';
      font-weight: bold;
+ }
+
+ #primary-navigation{
+     background-color: #353839;
  }
 
  footer {
@@ -32,6 +32,11 @@ html {
  }
 
 #intro {
+    padding-top: 10%;
+    background-image: url("../starsBackground.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     flex-shrink: 0;
     height: 85vh;
 
