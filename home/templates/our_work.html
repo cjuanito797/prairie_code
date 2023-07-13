@@ -79,6 +79,8 @@
 {% block body_settings %}
 
 <body style="background-color: #1c2951;">
+    <div id="preloader">
+    </div>
 
     {% endblock %}
 
@@ -136,6 +138,14 @@
         </div>
 
     </div>
+
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function () {
+            loader.style.display = "none";
+
+        })
+    </script>
 
 
     {% endblock %}
