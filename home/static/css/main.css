@@ -78,15 +78,10 @@ html {
     font-weight: bold;
 }
 
-#brand-text {
-    text-align: center;
-    color: white;
-    width: 100%;
-    font-size: 17px;
-    font-weight: bold;
-    border-bottom: 3px solid white;
-    border-top: 3px solid white;
+#brand-text h2 {
+    font-family: 'space-ranger-expanded-italic-expanded-italic', sans-serif;
     padding: 1%;
+    margin-left: 2vw;
 }
 
 
