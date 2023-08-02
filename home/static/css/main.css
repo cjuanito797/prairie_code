@@ -231,7 +231,7 @@ a {
 
 
 
-@media (max-width: 1199px)
+@media (max-width: 1190px)
 {
     html {
         width: 100%;
@@ -246,6 +246,7 @@ a {
     }
 
     #brand {
+        background-color: white;
         width: 91%;
         text-align: center;
     }
