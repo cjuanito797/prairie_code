@@ -175,7 +175,10 @@ CSP_IMG_SRC = [
     "'self'",
     "https://cdnassets.hw.net/",
     "http://www.w3.org/2000/svg",
-    "data:"
+    "data:",
+    "https://bulma.io/images/bulma-logo.png",
+    "https://www.freepnglogos.com/uploads/javascript/logo-html-5-css-javascript-source-code-for-the-taking-23.png",
+
 ]
 
 CSP_FRAME_SRC = [

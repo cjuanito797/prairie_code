@@ -10,11 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="pKEmhkGIUvN9zvKPCbeiwEc9XsDbcOfJzEexyQMxhsc" />
     <title>Prairie Code LLC</title>
-    <link
-        href="https://www.dafontfree.net/embed/c3BhY2UtcmFuZ2VyLWV4cGFuZGVkLWl0YWxpYy1leHBhbmRlZC1pdGFsaWMmZGF0YS8xNS9zLzcyNTI0L3NwYWNlcmFuZ2VyZXhwaXRhbC50dGY"
-        rel="stylesheet" type="text/css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 
     <link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'css/lightbox.css' %}" rel="stylesheet" type="text/css">
@@ -33,293 +30,232 @@
     {% endblock %}
     {% block navigation %}
 
-    <nav class="navbar navbar-expand-lg bg-dark" id="primary-navigation">
-        <div class="container-fluid">
-            <div id="brand" class="">
-                <a class="" href="{% url 'Home:home' %}" style="text-decoration: none; color: white;">
-                    <h1 id="brand-text"><strong>Prairie Code &lt; / &gt;</strong>
-                    </h1>
+    <nav class="navbar" role="navigation" aria-label="main navigation" style="background-color: #27374D;">
+        <div class="navbar-brand">
+            <!-- svg for prairiee leaf code -->
 
+            <a class="navbar-item has-text-white is-size-3" href="{% url 'Home:home' %}" style="font-family: hyperion;">
+                <strong>Prairie Code</strong>
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item has-text-white">
+                    Our Process
                 </a>
+
+                <a class="navbar-item has-text-white" href="{% url 'Home:our_work' %}">
+                    Our Work
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link has-text-white">
+                        More
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item">
+                            About
+                        </a>
+                        <a class="navbar-item">
+                            Testimonials
+                        </a>
+                        <a class="navbar-item">
+                            Contact
+                        </a>
+                        <hr class="navbar-divider">
+                        <a class="navbar-item">
+                            Report an issue
+                        </a>
+                    </div>
+                </div>
             </div>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation" style="border: none;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white"
-                    class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
-                    <path
-                        d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
-                </svg>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav text-center">
-                    <li class="nav-item  text-center">
-                        <a class="nav-link text-white" aria-current="page"
-                            href="{% url 'home:about_us' %}"><strong>About
-                                Us</strong></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="{% url 'home:our_work' %}">Our
-                            Work</a>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="{% url 'home:our_process' %}">Our
-                            Process</a>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="{% url 'home:testimonials' %}">Testimonials</a>
-                    </li>
-
-                    </li>
-
-                </ul>
-
-            </div>
         </div>
     </nav>
     {% endblock %}
     {% block mainbody %}
 
+
+
+
     <section id="intro">
-
-
-        <!-- section that serves for an introduction. -->
-        <!-- Content here -->
-        <div id="intro-container" class="container-fluid pt-5 mt-4">
-
+        <div class="hero-body has-text-center">
             {% if found_spam == 1 %}
             <div class="alert alert-danger" role="alert">
                 Links can't be included within contents of form!
             </div>
 
             {% endif %}
-            <h1 id="main_header" class="display-2 pt-3">
-                Create & Grow Your
-                Website Today With
-                Prairie Code!</h1>
+            <div class="container has-text-center" style=" text-align: center;">
+                <h1 class="title is-size-1 has-text-white" style="font-family: hyperion;">
+                    <strong>Create & Grow Your Website Today With Prairie Code!</strong>
+                </h1>
+                <p class=" subtitle">
+                    <a class="button is-light p-5 has-text-weight-bold">Start Today</a>
 
-            <a role="button" class="btn btn-light p-3" id="main_button" href="{% url 'Home:home' %}#contact_us"
-                target="_top">Start
-                Today</a>
-
-        </div>
-    </section>
-    <section id="captions">
-        <div class="row justify-content-between">
-            <div class="col-sm text-center facet">
-                <div class="container-fluid  p-3 facet-header">
-                    <h2 class="header">Intuition</h2>
-                </div>
-                <img src="../static/brain.png" width="100" height="100" class="p-2">
-                <p class="lead p-5 text-white" style="font-weight: bold;">Through each project that we have built we
-                    have gained new
-                    insight in how
-                    we can
-                    create
-                    the web application of your dreams.</p>
-            </div>
-
-            <div class="col-sm text-center facet">
-                <div class="container-fluid p-3 facet-header">
-                    <h2 class="header">Inspiration</h2>
-                </div>
-                <img src="../static/fire.png" width="100" height="100" class="p-2">
-                <p class="lead p-5  text-white" style="font-weight: bold;">Our inspiration is our client, we take our
-                    time to understand yourself
-                    as well as
-                    your companies mission, goals and values. We take all of this and we turn it into our source of
-                    inspiration in order to build the product of your dreams.</p>
-
-            </div>
-
-            <div class="col-sm text-center facet">
-                <div class="container-fluid  p-3 facet-header">
-                    <h2 class="header">Innovation</h2>
-                </div>
-                <img src="../static/lightbulb.png" width="100" height="100" class="p-2">
-                <p class="lead p-5 text-white" style="font-weight: bold;">We are constantly utilizing the latest and
-                    greatest technologies and
-                    discovering new
-                    ways as to how we can greater improve the performance of our applications. </p>
+                </p>
             </div>
         </div>
     </section>
 
-    <section id="about_us">
-        <div class="row justify-content-between text-center">
-            <div class="col-sm text-center p-5"
-                style="align-items: center; justify-content: center; margin-left: 10vw; margin-right: 10vw;">
-                <h1 class="heading" style="color: white; font-family: April; font-weight: bold;">Our Story</h1>
-                <p class="lead p-2 text-white m-1" style="font-weight: bold;">Hello my name is Juan
-                    Lizarraga-Cortez, I
-                    am a recent graduate of the
-                    University Of
-                    Nebraska - Omaha.
-                    After having recieved my bachelors in Computer Science, I recognized that web development was the
-                    career
-                    choice that I wanted to pursue. I have always loved solving problems and armed with my resolve and
-                    entreprenurial spirit, I decided to venture out on my own. This is when Prairie Code LLC was
-                    born.</p>
+    <section id="our_techStack">
+
+        <section class="hero is-large pb-5" style="background-color: #526D82;">
 
 
-                <h2 style="font-family: Jazz LET, fantasy; font-weight: bold;" class="text-white pt-5">Juan L.</h2>
+            <div class="hero-body pt-5 pl-0 pr-0 pb-5" style="text-align: center;">
+                <div class="container">
+                    <p class="title has-text-white" id="techStackTitle">
+                        Overview
+                    </p>
+                    <p class="subtitle has-text-white" id="techStackDetails" style="text-align: left;">
+                        Hello there my name is Juan Lizarraga-Cortez. I'm a seasoned web developer. So what is it
+                        exactly that a web developer does, and what are the different aspects that go into building a
+                        sophisticated website? Below I have broken down the process, into 4 main categories, you may
+                        click on each of the tasks below to learn a little bit more about each subject.
+                    </p>
+
+                    <div id="overviewSection" class="m-0 p-0">
+                        <img src="../static/youngJuan.png" height="750" width="550">
+                    </div>
+
+                    <div id="frontEndTechnologies" style="display: none;">
+                        <img src="https://www.freepnglogos.com/uploads/javascript/logo-html-5-css-javascript-source-code-for-the-taking-23.png"
+                            height="650" width="550">
+                    </div>
+
+                    <div id="backEndTechnologies" style="display: none;">
+                        <img src="../static/python.png" height="250" width="175">
+                        <img src="../static/vue.js.png" height="250" width="175">
+                        <img src="../static/django-logo.png" height="150" width="125">
+                    </div>
+
+                    <div id="hostingTechnologies" style="display: none;">
+                        <img src="../static/aws.png" height="750" width="550">
+                    </div>
+
+                    <div id="databaseTechnologies" style="display: none;">
+                        <img src="../static/mysql.png" height="350" width="250" class="p-0 m-0">
+                    </div>
+                </div>
             </div>
 
-        </div>
-
-    </section>
-    <section id="our_technologies" class="bg-light">
-        <div class="row jusitfy-content-between p-3">
-            <div class="col-sm text-center">
-                <h1 style="font-family: April; font-weight: bold; text-decoration: underline; text-underline-position: under; width: 100%;"
-                    class="pt-3">
-                    Powered by the latest and
-                    greatest!</h1>
-                <p class="lead m-5" style="font-weight: bold;">These are the technologies that we utilize in order to
-                    power
-                    our business. I am committed to keeping myself updated and continue to evolve by keeping up with the
-                    latest and greatest.</p>
+            <div class="hero-foot">
+                <div class="hero-foot">
+                    <nav class="tabs is-boxed is-fullwidth">
+                        <div class="container">
+                            <ul>
+                                <li class="is-active" id="overview">
+                                    <a class="" onclick="changeContent('overview')" id="overviewButton">Overview</a>
+                                </li>
+                                <li id="front-end">
+                                    <a class="has-text-white" onclick="changeContent('front-end')"
+                                        id="frontEndButton">Graphical Design</a>
+                                </li>
+                                <li id="back-end">
+                                    <a class="has-text-white" onclick="changeContent('back-end')"
+                                        id="backEndButton">Functionality</a>
+                                </li>
+                                <li id="hosting">
+                                    <a class="has-text-white" onclick="changeContent('hosting')" id="hostingButton">Web
+                                        Hosting</a>
+                                </li>
+                                <li id="database">
+                                    <a class="has-text-white" onclick="changeContent('database')"
+                                        id="databaseButton">Database</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
             </div>
-
-            <div class="col-sm">
-
-                <!-- row for Django, Vue.js and Python. -->
-                <div class="row justify-content-between text-center">
-                    <div class="col-sm p-3" style="height: 15vh;">
-                        <img src="../static/django.jpeg" style="height: 100%; width: auto;">
-                    </div>
-
-                    <div class="col-sm p-3" style="height: 15vh;">
-                        <img src="../static/vue.js.png" style="height: 100%; width: auto;">
-                    </div>
-
-                    <div class="col-sm p-3" style="height: 15vh">
-                        <img src="../static/python.png" style="height: 100%; width: auto;">
-                    </div>
-
-                </div>
-
-                <!-- row for HTML5, CSS3 and JavaScript  -->
-                <div class="row justify-content-between text-center">
-                    <div class="col-sm p-3" style="height: 15vh;">
-                        <img src="../static/html5.png" style="height: 90%; width: auto; position: relative;">
-                    </div>
-
-                    <div class="col-sm p-3" style="height: 15vh;">
-                        <img src="../static/css3.png" style="height: 100%; width: auto;">
-                    </div>
-
-                    <div class="col-sm p-3" style="height: 15vh">
-                        <img src="../static/javascript.png" style="height: 100%; width: auto;">
-                    </div>
-
-                </div>
-
-                <div class="row justify-content-between text-center ml-3">
-                    <div class="col-sm">
-                    </div>
-
-                    <div class="col-sm p-3 m-3" style="height: 15vh;">
-                        <img src="../static/mysql.png" style="height: 100%; width: auto;">
-                    </div>
-
-                    <div class="col-sm p-5" style="height: 15vh">
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
+        </section>
     </section>
 
-    <section id="contact_us">
-        <div class="row justify-content-between">
-            <div class="col-sm text-center p-5" id="contact_form">
+    <section id="captions" style="background-color: #27374D">
+        <div class="columns mb-5 mr-5 ml-5 p-3">
+            <div class="card column is-half is-offset-one-quarter" style="background-color: #526D82;">
+                <div class="card-content has-text-centered">
+                    <p class="title has-text-white">
+                        Intuition
+                    </p>
+                    <p class="subtitle has-text-white">
+                        Through each project that we have built we have gained new insight in how we can create
+                        the web application of your dreams.
+                    </p>
+                    <img src="../static/brain.png" width="100" height="100" class="p-2">
 
-                <h1 style="font-family: April; font-weight: bold; color: white;">Ready To Get To Work?</h1>
-                <p class="lead text-white">Simply fill out the form below, and we will be in touch soon.</p>
+                </div>
+
             </div>
         </div>
 
-        <div class="row justify-content-between">
-            <div class="col-sm" id="contact_form">
-            </div>
+        <div class="columns  m-5 p-3">
+            <div class="card column is-half is-offset-one-quarter" style="background-color: #526D82;">
+                <div class="card-content has-text-centered">
+                    <p class="title has-text-white">
+                        Innovation
+                    </p>
+                    <p class="subtitle has-text-white">
+                        We are constantly utilizing the latest and
+                        greatest technologies and
+                        discovering new
+                        ways as to how we can greater improve the performance of our applications.
+                    </p>
+                    <img src="../static/lightbulb.png" width="100" height="100" class="p-2">
 
-            <div class="col-sm p-5" id="contact_form">
-                <form method="post">
-                    {% csrf_token %}
-                    {% if form.errors %}
-                    <div class="alert alert-danger form-control from-control-lg">
-                        {{ form.errors }}
-                    </div>
-                    {% endif %}
-                    <div class="form-group col-sm p-2">
-                        <input type="text" name="name" id="id_name" class="form-control form-control-lg"
-                            placeholder="Name">
-                    </div>
-
-                    <div class="form-group col-sm p-2">
-                        <input type="email" name="email" id="id_email" class="form-control form-control-lg"
-                            placeholder="Email">
-                    </div>
-
-
-                    <div class="form-group col-sm p-2">
-                        <textarea id="id_details" name="details" class="form-control form-control-lg"
-                            placeholder="How Can We Help?" cols="4" rows="5"></textarea>
-                    </div>
-
-                    <div class="form-group col-sm">
-                        <button type="submit" class="btn btn-light p-3" id="form_submit">Submit</button>
-                    </div>
-
-
-                </form>
+                </div>
 
             </div>
-
-            <div class="col-sm" id="contact_form">
-            </div>
-
         </div>
 
+        <div class="columns mt-5 ml-5 mr-5 p-3 pb-5">
+            <div class="card column is-half is-offset-one-quarter" style="background-color: #526D82;">
+                <div class="card-content has-text-centered">
+                    <p class="title has-text-white">
+                        Inspiration
+                    </p>
+                    <p class="subtitle has-text-white">
+                        Our inspiration is our client, we take our
+                        time to understand yourself
+                        as well as
+                        your companies mission, goals and values. We take all of this and we turn it into our source
+                        of
+                        inspiration in order to build the product of your dreams
+                    </p>
+
+                    <img src="../static/fire.png" width="100" height="100" class="p-2">
+
+                </div>
+
+            </div>
+        </div>
     </section>
 
     {% endblock %}
-
     {% block footer %}
 
-    <footer class="text-lg-start">
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p class="title is-size-4">
+                <strong>Prairie Code LLC </strong>
 
-        <!-- copyright section -->
-        <section class="d-flex justify-content-center p-3 m-0" id="footer_trademark">
-            <div class="row">
-                <p>@Prairie Code LLC</p>
-            </div>
-        </section>
+            </p>
+        </div>
     </footer>
     {% endblock %}
 
-    <script>
-        var loader = document.getElementById("preloader");
-        setTimeout(function () {
-            loader.style.display = "none";
-        }, 1000);
-
-    </script>
-
-
-    <script src="{% static 'js/main.js' %}"></script>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
-
-
+    <script src="{% static 'js/main.js' %}" type="text/javascript"></script>
 
 </body>
-
-
-
 
 </html>
