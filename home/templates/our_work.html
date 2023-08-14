@@ -77,7 +77,7 @@
 
 {% block body_settings %}
 
-<body class="bg-dark">
+<body>
     <div id="preloader">
     </div>
 
@@ -85,50 +85,23 @@
 
     {% block mainbody %}
 
+    {% for project in projects %}
+    <a href="">
+        <div class="container is-half" id="project_container" style="margin-left: 15vw; margin-right: 15vw;">
 
-    <div class="row justify-content-between pt-5 mt-5">
+            <img src="../../media/{{project.thumbnail}}" class="image">
 
-        <div class="col-sm">
-        </div>
-
-        <div class="col-sm justify-content-between pb-5">
-            <!-- insert the "Our Work" section here -->
-
-
-
-            <!-- create a section for each project that we have built. -->
-
-
-            <div class="d-flex md-auto flex-row flex-wrap w-35 text-center justify-content-center">
-
-                {% for project in projects %}
-                <a href="{% url 'Home:project_details' project.id %}">
-                    <div class="container mt-3" id="project_container">
-
-                        <img src="../../media/{{project.thumbnail}}" class="image">
-
-                        <div class="overlay">
-                            <div class="text">
-                                {{project.name}}
-                            </div>
-                        </div>
-
-
-                    </div>
-                </a>
-
-                {% endfor %}
-
+            <div class="overlay">
+                <div class="text">
+                    {{project.name}}
+                </div>
             </div>
 
 
-
         </div>
+    </a>
 
-        <div class="col-sm">
-        </div>
-
-    </div>
+    {% endfor %}
 
     <script>
         var loader = document.getElementById("preloader");

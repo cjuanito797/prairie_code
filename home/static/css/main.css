@@ -16,12 +16,12 @@ html {
 
 #intro {
     padding-top: 10%;
-    background-image: url("../background.jpeg");
+    background-image: url("../home_pageBackground.jpeg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     flex-shrink: 0;
-    height: 65vh;
+    height: 45vh;
 
 }
 
