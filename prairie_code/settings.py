@@ -157,6 +157,7 @@ CSP_SCRIPT_SRC = [
     "https://stackpath.bootstrapcdn.com",
     "https://cdn.jsdelivr.net",
     "https://code.jquery.com",
+    "https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"
 ]
 
 CSP_STYLE_SRC = [
