@@ -13,9 +13,7 @@
     <style>
         #project_container {
             position: relative;
-            height: 30vh;
-            max-width: 100%;
-            min-width: 65vmin;
+            height: 45vh;
             display: flex;
             padding-top: 25px;
         }
@@ -83,25 +81,28 @@
 
     {% endblock %}
 
-    {% block mainbody %}
+    <div id="projects" style="align-items: center; margin-left: 15vw; margin-right: 15vw;">
+        {% block mainbody %}
 
-    {% for project in projects %}
-    <a href="">
-        <div class="container is-half" id="project_container" style="margin-left: 15vw; margin-right: 15vw;">
+        {% for project in projects %}
+        <a href="">
+            <div class="container is-half" id="project_container" style="">
 
-            <img src="../../media/{{project.thumbnail}}" class="image">
+                <img src="../../media/{{project.thumbnail}}" class="image">
 
-            <div class="overlay">
-                <div class="text">
-                    {{project.name}}
+                <div class="overlay">
+                    <div class="text">
+                        {{project.name}}
+                    </div>
                 </div>
+
+
             </div>
+        </a>
 
+        {% endfor %}
 
-        </div>
-    </a>
-
-    {% endfor %}
+    </div>
 
     <script>
         var loader = document.getElementById("preloader");
