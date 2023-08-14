@@ -13,7 +13,7 @@
     <style>
         #project_container {
             position: relative;
-            height: 45vh;
+            height: 40vh;
             width: 65vw;
             display: flex;
             padding-top: 25px;
@@ -89,7 +89,7 @@
         {% for project in projects %}
         <div class="container" id="project_container">
 
-            <a href="">
+            <a href="{% url 'Home:project_details' project.id %}">
                 <img src="../../media/{{project.thumbnail}}" class="image">
                 <div class="overlay">
                     <div class="text">
