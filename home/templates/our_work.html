@@ -81,28 +81,29 @@
 
     {% endblock %}
 
-    <div id="projects" style="align-items: center; margin-left: 15vw; margin-right: 15vw;">
-        {% block mainbody %}
+
+    {% block mainbody %}
+    <section id="main_body"
+        style=" background-color: black; text-align: center; align-items: center; justify-content: center;">
 
         {% for project in projects %}
-        <a href="">
-            <div class="container is-half" id="project_container" style="">
+        <div class="container" id="project_container" style="background-color: yellow;">
 
+            <a href="">
                 <img src="../../media/{{project.thumbnail}}" class="image">
-
                 <div class="overlay">
                     <div class="text">
                         {{project.name}}
                     </div>
                 </div>
+            </a>
 
 
-            </div>
-        </a>
+        </div>
 
         {% endfor %}
 
-    </div>
+    </section>
 
     <script>
         var loader = document.getElementById("preloader");
