@@ -94,9 +94,7 @@
                         <a class="button is-info" href="{% url 'Home:contact_us' %}">
                             Contact Us
                         </a>
-                        <a class="button is-light">
-                            Log in
-                        </a>
+
                     </div>
                 </div>
             </div>
@@ -278,7 +276,6 @@
     </footer>
     {% endblock %}
 
-    {% block javascript %}
     <script type="text/javascript">
         $(document).ready(function () {
 
@@ -293,8 +290,10 @@
             });
         });
 
-
     </script>
+    {% block javascript %}
+
+
     <script type="text/javascript">
         var loader = document.getElementById("preloader");
         setTimeout(function () {
