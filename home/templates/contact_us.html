@@ -55,6 +55,8 @@
 
     </section>
 
+    {% block javascript %}
+
     <script>
         var loader = document.getElementById("preloader");
         window.addEventListener("load", function () {
@@ -62,5 +64,7 @@
 
         });
     </script>
+
+    {% endblock %}
 
     {% endblock %}

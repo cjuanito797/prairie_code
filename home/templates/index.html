@@ -28,6 +28,13 @@
 
 
     {% endblock %}
+
+    {% block preloader %}
+    <div id="preloader">
+    </div>
+
+    {% endblock %}
+
     {% block navigation %}
 
     <nav class="navbar" role="navigation" aria-label="main navigation" style="background-color: #27374D;">
@@ -99,8 +106,7 @@
     {% endblock %}
     {% block mainbody %}
 
-    <div id="preloader">
-    </div>
+
 
 
     <section id="intro">
@@ -262,9 +268,9 @@
     {% endblock %}
     {% block footer %}
 
-    <footer class="footer">
+    <footer class="footer" style="background-color: #27374D;">
         <div class="content has-text-centered">
-            <p class="title is-size-4">
+            <p class="title is-size-4 has-text-white">
                 <strong>Prairie Code LLC </strong>
 
             </p>
@@ -272,6 +278,7 @@
     </footer>
     {% endblock %}
 
+    {% block javascript %}
     <script type="text/javascript">
         $(document).ready(function () {
 
@@ -286,6 +293,7 @@
             });
         });
 
+
     </script>
     <script type="text/javascript">
         var loader = document.getElementById("preloader");
@@ -299,6 +307,7 @@
 
     <script src="{% static 'js/main.js' %}" type="text/javascript"></script>
 
+    {% endblock %}
 </body>
 
 </html>

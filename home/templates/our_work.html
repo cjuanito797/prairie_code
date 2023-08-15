@@ -78,8 +78,7 @@
 {% block body_settings %}
 
 <body>
-    <div id="preloader">
-    </div>
+
 
     {% endblock %}
 
@@ -106,6 +105,7 @@
 
     </section>
 
+    {% block javascript %}
     <script>
         var loader = document.getElementById("preloader");
         window.addEventListener("load", function () {
@@ -113,6 +113,8 @@
 
         });
     </script>
+
+    {% endblock %}
 
 
     {% endblock %}
