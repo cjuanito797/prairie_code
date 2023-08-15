@@ -1,39 +1,66 @@
 {% extends 'index.html' %}
 {% load static %}
 
+{% block body_settings %}
+
+<body style="background-color: #526D82;">
 
 
-{% block mainbody %}
 
-<div class="columns is-centered p-5">
-    <div class="column is-half has-text-centered">
-        <img src="https://static.vecteezy.com/system/resources/previews/011/354/484/original/young-man-in-hat-holding-laptop-3d-character-illustration-png.png"
-            width="75%" height="75%" style="margin-right: 10vw;">
+    {% endblock %}
 
 
-    </div>
-    <div class="column is-half">
-        <form method="post">
-            <div class="field is-horizontal">
+    {% block mainbody %}
 
-                <div class="field-body">
-                    <div class="field">
-                        <div class="control is-expanded">
-                            <input class="input" type="text" placeholder="First Name">
+    <div class="columns is-centered p-5">
+        <div class="column is-half has-text-centered">
+            <img src="https://static.vecteezy.com/system/resources/previews/011/354/484/original/young-man-in-hat-holding-laptop-3d-character-illustration-png.png"
+                width="75%" height="75%" style="margin-right: 10vw;">
 
+
+        </div>
+        <div class="column is-half">
+            <div class="hero-body has-text-center">
+
+                <div class="container has-text-center" style=" text-align: center;">
+                    <form method="post">
+                        <div class="field is-horizontal">
+                            <div class="field-body">
+                                <div class="field">
+                                    <div class="control is-expanded">
+                                        <input class="input" type="text" placeholder="First Name">
+
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="control is-expanded">
+                                        <input class="input" type="text" placeholder="Last Name">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="field">
-                        <div class="control is-expanded">
-                            <input class="input" type="text" placeholder="Last Name">
+
+                        <div class="field">
+                            <div class="control">
+                                <input class="input" type="email" placeholder="Email">
+                            </div>
                         </div>
-                    </div>
+
+
+                    </form>
                 </div>
             </div>
-
-        </form>
+        </div>
     </div>
-</div>
 
+    </section>
 
-{% endblock %}
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function () {
+            loader.style.display = "none";
+
+        });
+    </script>
+
+    {% endblock %}
