@@ -1,0 +1,43 @@
+{% extends 'index.html' %}
+{% load static %}
+
+
+
+{% block mainbody %}
+
+<div class="columns p-5">
+    <div class="column is-half" style="border-right: 1px solid grey; text-align: center;">
+
+        <img src="https://static.vecteezy.com/system/resources/previews/011/354/484/original/young-man-in-hat-holding-laptop-3d-character-illustration-png.png"
+            width="75%" height="75%">
+
+
+    </div>
+    <div class="column is-half">
+        <form method="post">
+            <div class="field is-horizontal">
+
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control is-expanded">
+                            <input class="input" type="text" placeholder="First Name">
+
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control is-expanded">
+                            <input class="input" type="text" placeholder="Last Name">
+
+                        </div>
+                    </div>
+                </div>
+
+        </form>
+    </div>
+
+
+
+</div>
+
+
+{% endblock %}

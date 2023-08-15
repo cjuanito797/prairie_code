@@ -12,7 +12,6 @@ function changeContent(value) {
   let current_button = "";
   let previous_tab = "";
   let previous_button = "";
-  let image = "";
 
   if (lastTabClicked === "" || lastTabClicked === "overview") {
     //set the display properties equal to none.
