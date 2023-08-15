@@ -180,6 +180,7 @@ CSP_IMG_SRC = [
     "https://bulma.io/images/bulma-logo.png",
     "https://www.freepnglogos.com/uploads/javascript/logo-html-5-css-javascript-source-code-for-the-taking-23.png",
     "https://static.vecteezy.com/system/resources/previews/011/354/484/original/young-man-in-hat-holding-laptop-3d-character-illustration-png.png",
+    "https://t4.ftcdn.net/jpg/02/84/69/23/360_F_284692342_FkKunloWDjhyfVsmUxxnGJQjR3fiOZ4U.jpg",
 
 ]
 
