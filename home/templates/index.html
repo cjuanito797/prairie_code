@@ -104,23 +104,21 @@
 
 
     <section id="intro">
-        <div class="hero-body has-text-center">
-            {% if found_spam == 1 %}
-            <div class="alert alert-danger" role="alert">
-                Links can't be included within contents of form!
-            </div>
+        {% if found_spam == 1 %}
+        <div class="alert alert-danger" role="alert">
+            Links can't be included within contents of form!
+        </div>
 
-            {% endif %}
-            <div class="container has-text-center" style=" text-align: center;">
-                <h1 class="title is-size-1 has-text-white" style="font-family: hyperion;">
-                    <strong>Create & Grow Your Website Today With Prairie Code!</strong>
-                </h1>
+        {% endif %}
+        <div class="container has-text-center" style=" text-align: center;">
+            <h1 class="title is-size-1 has-text-white" style="font-family: hyperion;">
+                <strong>Create & Grow Your Website Today With Prairie Code!</strong>
+            </h1>
 
-                <!--<p class=" subtitle">
+            <!--<p class=" subtitle">
                     <a class="button is-light p-5 has-text-weight-bold">Start Today</a>
 
                     </p>-->
-            </div>
         </div>
     </section>
 
