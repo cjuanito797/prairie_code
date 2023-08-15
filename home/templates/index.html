@@ -57,7 +57,7 @@
 
         <div id="navbarBasicExample" class="navbar-menu" style="background-color: #27374D;">
             <div class="navbar-start">
-                <a class="navbar-item has-text-white">
+                <a class="navbar-item has-text-white" href="{% url 'Home:our_process' %}">
                     Our Process
                 </a>
 
@@ -171,7 +171,7 @@
             <div class="hero-foot">
                 <div class="hero-foot">
                     <nav class="tabs is-boxed is-fullwidth">
-                        <div class="container">
+                        <div class="container" style="overflow-x: auto; overflow-y: hidden;">
                             <ul>
                                 <li class="is-active" id="overview">
                                     <a class="" onclick="changeContent('overview')" id="overviewButton"
