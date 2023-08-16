@@ -64,12 +64,12 @@
                 <a class="navbar-item has-text-white" href="{% url 'Home:our_work' %}">
                     Our Work
                 </a>
-
+                <!--
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link has-text-white">
                         More
                     </a>
-                    <!--
+
                     <div class="navbar-dropdown" style="background-color: #27374D;">
                         <a class="navbar-item has-text-white">
                             About
@@ -87,20 +87,20 @@
                     </div>
                 </div>
                 -->
-                </div>
+            </div>
 
-                <div class="navbar-end">
-                    <div class="navbar-item">
-                        <div class="buttons">
-                            <a class="button is-info" href="{% url 'Home:contact_us' %}">
-                                Contact Us
-                            </a>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-info" href="{% url 'Home:contact_us' %}">
+                            Contact Us
+                        </a>
 
-                        </div>
                     </div>
                 </div>
-
             </div>
+
+        </div>
     </nav>
     {% endblock %}
     {% block mainbody %}
