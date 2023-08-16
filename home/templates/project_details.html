@@ -69,17 +69,24 @@
     <div class="row justify-content-between p-2">
 
 
-        <section class="section-header text-center">
-            <h1 class="text-white text-decoration-underline">Project Gallery</h1>
+        <section class="has-text-centered">
+            <h1 class="is-size-1 has-text-weight-semibold">Project Gallery</h1>
         </section>
         <section class="image_container">
-            <div class="gallery">
+            <div class="columns is-lex-wrap-wrap">
                 {% for image in images %}
-                <a href="/media/{{image}}" data-lightbox="models" data-title="{{image.caption}}">
-                    <img src="/media/{{image}}">
-                </a>
+                <div class="card" style="width: 18rem; margin: 1%; height: 100%;">
+
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="/media/{{image}}">
+                        </figure>
+                    </div>
+
+                </div>
 
                 {% endfor %}
+
             </div>
 
 
