@@ -8,6 +8,7 @@ from django.core.mail import send_mail, EmailMultiAlternatives
 # Create your views here.
 
 def contact_us(request):
+    `
     return render(request, "contact_us.html")
 
 def about_us(request):
