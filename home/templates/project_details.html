@@ -76,7 +76,9 @@
         <div class="columns is-flex-wrap-wrap p-5">
             {% for image in images %}
             <div class="column is-one-third">
-                <img src="/media/{{image}}">
+                <a href="/media/{{image}}" data-lightbox="models" data-title="{{image.caption}}">
+                    <img src="/media/{{image}}">
+                </a>
             </div>
 
             {% endfor %}
