@@ -108,22 +108,97 @@
 
 
 
-    <section id="intro">
-        {% if found_spam == 1 %}
-        <div class="alert alert-danger" role="alert">
-            Links can't be included within contents of form!
+    <section id="introduction">
+        <div class="columns">
+            <div class="column is-half has-text-centered p-5">
+                <img src="../static/homePage.gif">
+            </div>
+
+            <div class="column is-half" style="padding-top: 5%;  padding-left: 5vw; padding-right: 5vw;">
+                <div class="box m-5 pb-5">
+                    <p class="text is-size-3 has-text-weight-semibold is-underlined has-text-centered">A Little Bit
+                        About Us</p>
+
+
+
+                    <div class="container has-text-left">
+                        <p class="text has-text-weight-semibold is-size-5">We are an up and coming systems development
+                            firm based
+                            out
+                            of the midwest. We
+                            believe that systems are the optimal solution to managing your business in this digital
+                            society
+                            we live in. We believe that there is no one size fits all or templates to creating a
+                            well-rounded system for your business, you can learn about us by visiting our "About Us"
+                            page.</p>
+
+                        <div class="container has-text-centered pt-5">
+                            <a href="#" class="button is-primary">About Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="captions" class="pt-5">
+        <div class="columns mb-5 mr-5 ml-5 p-3">
+            <div class="card column is-half is-offset-one-quarter" style="background-color: #27374D;;">
+                <div class="card-content has-text-centered">
+                    <p class="title has-text-white">
+                        Intuition
+                    </p>
+                    <p class="subtitle has-text-white">
+                        Through each project that we have built we have gained new insight in how we can create
+                        the web application of your dreams.
+                    </p>
+                    <img src="../static/brain.png" width="100" height="100" class="p-2">
+
+                </div>
+
+            </div>
         </div>
 
-        {% endif %}
-        <div class="container has-text-center" style=" text-align: center;">
-            <h1 class="title is-size-1 has-text-white" style="font-family: hyperion;">
-                <strong>Create & Grow Your Website Today With Prairie Code!</strong>
-            </h1>
+        <div class="columns  m-5 p-3">
+            <div class="card column is-half is-offset-one-quarter" style="background-color: #27374D;">
+                <div class="card-content has-text-centered">
+                    <p class="title has-text-white">
+                        Innovation
+                    </p>
+                    <p class="subtitle has-text-white">
+                        We are constantly utilizing the latest and
+                        greatest technologies and
+                        discovering new
+                        ways as to how we can greater improve the performance of our applications.
+                    </p>
+                    <img src="../static/lightbulb.png" width="100" height="100" class="p-2">
 
-            <!--<p class=" subtitle">
-                    <a class="button is-light p-5 has-text-weight-bold">Start Today</a>
+                </div>
 
-                    </p>-->
+            </div>
+        </div>
+
+
+        <div class="columns mt-5 ml-5 mr-5 p-3 pb-5">
+            <div class="card column is-half is-offset-one-quarter" style="background-color: #27374D;">
+                <div class="card-content has-text-centered">
+                    <p class="title has-text-white">
+                        Inspiration
+                    </p>
+                    <p class="subtitle has-text-white">
+                        Our inspiration is our client, we take our
+                        time to understand yourself
+                        as well as
+                        your companies mission, goals and values. We take all of this and we turn it into our source
+                        of
+                        inspiration in order to build the product of your dreams
+                    </p>
+
+                    <img src="../static/fire.png" width="100" height="100" class="p-2">
+
+                </div>
+
+            </div>
         </div>
     </section>
 
@@ -201,67 +276,6 @@
                 </div>
             </div>
         </section>
-    </section>
-
-    <section id="captions" class="pt-5">
-        <div class="columns mb-5 mr-5 ml-5 p-3">
-            <div class="card column is-half is-offset-one-quarter" style="background-color: #27374D;;">
-                <div class="card-content has-text-centered">
-                    <p class="title has-text-white">
-                        Intuition
-                    </p>
-                    <p class="subtitle has-text-white">
-                        Through each project that we have built we have gained new insight in how we can create
-                        the web application of your dreams.
-                    </p>
-                    <img src="../static/brain.png" width="100" height="100" class="p-2">
-
-                </div>
-
-            </div>
-        </div>
-
-        <div class="columns  m-5 p-3">
-            <div class="card column is-half is-offset-one-quarter" style="background-color: #27374D;">
-                <div class="card-content has-text-centered">
-                    <p class="title has-text-white">
-                        Innovation
-                    </p>
-                    <p class="subtitle has-text-white">
-                        We are constantly utilizing the latest and
-                        greatest technologies and
-                        discovering new
-                        ways as to how we can greater improve the performance of our applications.
-                    </p>
-                    <img src="../static/lightbulb.png" width="100" height="100" class="p-2">
-
-                </div>
-
-            </div>
-        </div>
-
-
-        <div class="columns mt-5 ml-5 mr-5 p-3 pb-5">
-            <div class="card column is-half is-offset-one-quarter" style="background-color: #27374D;">
-                <div class="card-content has-text-centered">
-                    <p class="title has-text-white">
-                        Inspiration
-                    </p>
-                    <p class="subtitle has-text-white">
-                        Our inspiration is our client, we take our
-                        time to understand yourself
-                        as well as
-                        your companies mission, goals and values. We take all of this and we turn it into our source
-                        of
-                        inspiration in order to build the product of your dreams
-                    </p>
-
-                    <img src="../static/fire.png" width="100" height="100" class="p-2">
-
-                </div>
-
-            </div>
-        </div>
     </section>
 
     {% endblock %}

@@ -188,6 +188,7 @@ CSP_IMG_SRC = [
 CSP_FRAME_SRC = [
     "https://maps.google.com/maps",
     "https://www.google.com/maps/",
+    "https://giphy.com/embed/qgQUggAC3Pfv687qPC",
 ]
 
 CELERY_BROKER_URL = "redis://localhost:6379"
