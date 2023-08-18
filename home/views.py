@@ -7,6 +7,8 @@ from .models import *
 from django.core.mail import send_mail, EmailMultiAlternatives
 # Create your views here.
 
+
+
 def contact_us(request):
 
     print("Inside of the contact_us view!")
@@ -39,8 +41,13 @@ def contact_us(request):
         msg = EmailMultiAlternatives("A New Quote Has Been Created", text_content, "Don't Reply <do_not_reply@domain.example>", ['prairiecodellc@gmail.com'])
         msg.send()
 
+        return redirect('Home:success')
+
 
     return render(request, "contact_us.html")
+
+def submissionSuuccess(request):
+    return render(request, "formSubmitSuccess.html")
 
 def about_us(request):
     return render(request, "about_us.html")
