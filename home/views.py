@@ -9,6 +9,37 @@ from django.core.mail import send_mail, EmailMultiAlternatives
 
 def contact_us(request):
 
+    print("Inside of the contact_us view!")
+    if request.method == "POST":
+        # get the content that was submitted.
+        first_name = request.POST['first_name']
+        last_name = request.POST['last_name']
+        email = request.POST['e-mail']
+        content = request.POST['content']
+
+        # need to group the data and send it in an e-mail format.
+        # we will make use of client side logic to ensure that all of the data is valid, perhaps just for the e-mail.
+        send_mail(
+            "Thank You For Choosing Prairie Code LLC",
+            "Hello, We Appreciate you for reaching out to us. A representative will soon reach out to you.",
+            "Don't Reply <do_not_reply@domain.example>",
+            [email],
+            fail_silently=False,
+            )
+        plaintext = get_template("email/admin_confirmation.txt")
+        content = ({
+            'user': first_name + last_name,
+                    'email': email,
+                    'details': content
+                })
+
+        text_content = plaintext.render(content)
+
+
+        msg = EmailMultiAlternatives("A New Quote Has Been Created", text_content, "Don't Reply <do_not_reply@domain.example>", ['prairiecodellc@gmail.com'])
+        msg.send()
+
+
     return render(request, "contact_us.html")
 
 def about_us(request):

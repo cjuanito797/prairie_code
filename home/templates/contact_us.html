@@ -34,19 +34,19 @@
                             begin to work on the website of your dreams.
                         </div>
                     </article>
-                    <form method="post">
+                    <form method="POST">
                         {% csrf_token %}
                         <div class="field is-horizontal">
                             <div class="field-body">
                                 <div class="field">
                                     <div class="control is-expanded">
-                                        <input class="input" type="text" placeholder="First Name">
+                                        <input class="input" type="text" name="first_name" placeholder="First Name">
 
                                     </div>
                                 </div>
                                 <div class="field">
                                     <div class="control is-expanded">
-                                        <input class="input" type="text" placeholder="Last Name">
+                                        <input class="input" type="text" name="last_name" placeholder="Last Name">
                                     </div>
                                 </div>
                             </div>
@@ -54,18 +54,19 @@
 
                         <div class="field">
                             <div class="control">
-                                <input class="input" type="email" placeholder="Email">
+                                <input class="input" type="email" name="e-mail" placeholder="Email">
                             </div>
                         </div>
 
                         <div class="field">
                             <div class="control">
-                                <textarea class="textarea is-medium" placeholder="What can we help with?"></textarea>
+                                <textarea class="textarea is-medium" placeholder="What can we help with?"
+                                    name="content"></textarea>
 
                             </div>
                         </div>
 
-                        <button class="button is-primary p-5"><strong>Submit</strong></button>
+                        <button class="button is-primary p-5" type="submit"><strong>Submit</strong></button>
 
 
                     </form>
