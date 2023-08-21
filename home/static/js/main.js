@@ -84,7 +84,7 @@ function changeContent(value) {
       break;
     case 'front-end':
       overview.innerHTML = "Front-end Technologies";
-      details.innerHTML = "These are the core technologies that we utilize in order to build out the visual layout of your page, without them the web as we know it would not exist. Here is what each of them does: <li>HTML: Used to create the main layout of your page.</li> <li>CSS: Utilized for creating animations, beautiful page transitions, and adding eye popping imagery</li><li>JavaScript(JS): Allows for us to build out dynamic features for youur website. Suuch as clicking through these different tabs</li>";
+      details.innerHTML = "These are the core technologies that we utilize in order to build out the visual layout of your page, without them the web as we know it would not exist. Here is what each of them does: <li>HTML: Used to create the main layout of your page.</li> <li>CSS: Utilized for creating animations, beautiful page transitions, and adding eye popping imagery</li><li>JavaScript(JS): Allows for us to build out dynamic features for your website. Such as clicking through these different tabs</li>";
       current_tab = document.getElementById("front-end");
       current_button = document.getElementById("frontEndButton");
       current_tab.classList.add("is-active");
@@ -95,7 +95,7 @@ function changeContent(value) {
 
     case 'back-end':
       overview.innerHTML = "Back-end Technologies";
-      details.innerHTML = "In order to bring your application to life for providing fruitful services to you and your business, a lot of work and engineering needs to be done behind the scenes. So what exactly do each of these do? (From left to right): <li>Python: This is what allows us to build out the business logic for how your website needs to operate. Allows us to build out logic for system requirements such as user registrations, log in, and so forth.</li><li>Vue.js: this is a framework that allows for us to building out highly complex user interfaces.</li><li>Django: this is what we utilize to contain your web application so that all of the many different applications and technologies that we use can effectively communicate with each other.</li>";
+      details.innerHTML = "In order to bring your application to life for providing fruitful services to you and your business, a lot of work and engineering needs to be done behind the scenes. So what exactly do each of these do? (From left to right): <li>Python: This is what allows us to build out the business logic for how your website needs to operate. Allows us to build out logic for system requirements such as user registrations, log in, and so forth.</li><li>Vue.js: this is a framework that allows for us to build out highly complex and dynamic user interfaces.</li><li>Django: this is what we utilize to contain your web application so that all of the many different applications and technologies that we use can effectively communicate with each other.</li>";
       //clear the values of active and button by removing classes.
       current_tab = document.getElementById("back-end");
       current_tab.classList.add("is-active");
