@@ -106,7 +106,7 @@ function changeContent(value) {
 
     case 'hosting':
       overview.innerHTML = "Hosting";
-      details.innerHTML = "We utilize Amazon AWS Cloud platform iin order to host your website. We leverage the power of cloud technologies, because this eliminates any hardware overhead, meaning that neither parties are responsible for the management or maintenance of physical hardware devices.";
+      details.innerHTML = "We utilize Amazon AWS Cloud platform in order to host your website. We leverage the power of cloud technologies, because this eliminates any hardware overhead, meaning that neither parties are responsible for the management or maintenance of physical hardware devices.";
       current_tab = document.getElementById("hosting");
       current_button = document.getElementById("hostingButton");
       current_tab.classList.add("is-active");
