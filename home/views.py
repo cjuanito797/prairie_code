@@ -10,7 +10,6 @@ from django.core.mail import send_mail, EmailMultiAlternatives
 
 
 def contact_us(request):
-
     print("Inside of the contact_us view!")
     if request.method == "POST":
         # get the content that was submitted.

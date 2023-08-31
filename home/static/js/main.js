@@ -127,7 +127,6 @@ function changeContent(value) {
   }
 }
 
-
 function storePrevTab(value) {
   lastTabClicked = value;
 }
