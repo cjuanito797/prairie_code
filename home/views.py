@@ -5,8 +5,9 @@ from .forms import quoteForm
 from django import forms
 from .models import *
 from django.core.mail import send_mail, EmailMultiAlternatives
-# Create your views here.
 
+
+# Create your views here.
 
 
 def contact_us(request):
@@ -18,61 +19,70 @@ def contact_us(request):
         email = request.POST['e-mail']
         content = request.POST['content']
 
-        # need to group the data and send it in an e-mail format.
-        # we will make use of client side logic to ensure that all of the data is valid, perhaps just for the e-mail.
+        # need to group the data and send it in an e-mail format. we will
+        # make use of client side logic to ensure that all of the data is
+        # valid, perhaps just for the e-mail.
         send_mail(
             "Thank You For Choosing Prairie Code LLC",
-            "Hello, We Appreciate you for reaching out to us. A representative will soon reach out to you.",
+            "Hello, We Appreciate you for reaching out to us. A "
+            "representative will soon reach out to you.",
             "Don't Reply <do_not_reply@domain.example>",
             [email],
             fail_silently=False,
-            )
+        )
         plaintext = get_template("email/admin_confirmation.txt")
         content = ({
             'user': first_name + last_name,
-                    'email': email,
-                    'details': content
-                })
+            'email': email,
+            'details': content
+        })
 
         text_content = plaintext.render(content)
 
-
-        msg = EmailMultiAlternatives("A New Quote Has Been Created", text_content, "Don't Reply <do_not_reply@domain.example>", ['prairiecodellc@gmail.com'])
+        msg = EmailMultiAlternatives("A New Quote Has Been Created",
+                                     text_content,
+                                     "Don't Reply <do_not_reply@domain.example>",
+                                     ['prairiecodellc@gmail.com'])
         msg.send()
 
         return redirect('Home:success')
 
-
     return render(request, "contact_us.html")
+
 
 def submissionSuuccess(request):
     return render(request, "formSubmitSuccess.html")
 
+
 def faq(request):
     return render(request, "faq.html")
+
 
 def about_us(request):
     return render(request, "about_us.html")
 
+
 def our_process(request):
-    return render(request,"our_process.html")
+    return render(request, "our_process.html")
+
 
 def testimonials(request):
     return render(request, "testimonials.html")
+
 
 def our_work(request):
     # get a collection of all, projects.
     projects = Project.objects.all()
 
-
-
     return render(request, "our_work.html", {'projects': projects})
+
 
 def project_details(request, pk):
     # get the project, based off of the pk that we passed in.
     project = Project.objects.filter(pk=pk).get()
 
-    # if the project has a link, associated with, it pass bool variable to template to create a button underneath image.
+    # if the project has a link, associated with, it pass bool variable to
+    # template to create a button underneath image.
     if project.link != "":
         print("The link for this project is: ", project.link)
         link = True
@@ -81,9 +91,8 @@ def project_details(request, pk):
 
     # query all of the images belonging to this proejct.
     images = ProjectGallery.objects.filter(project_id=pk)
-    return render(request, "project_details.html", {'project': project, 'images': images, 'link': link})
-
-
+    return render(request, "project_details.html",
+                  {'project': project, 'images': images, 'link': link})
 
 
 def home(request):
@@ -102,30 +111,34 @@ def home(request):
 
             if form.check_spam() == 1:
                 found_spam = 1
-                return render(request, "index.html", {'form': form, 'found_spam': found_spam})
+                return render(request, "index.html",
+                              {'form': form, 'found_spam': found_spam})
             else:
                 found_spam = 0
-                return render(request, "index.html", {'form': form, 'found_spam': found_spam})
+                return render(request, "index.html",
+                              {'form': form, 'found_spam': found_spam})
 
             send_mail(
-                    "Thank You For Choosing Prairie Code LLC",
-                    "Hello, We Appreciate you for reaching out to us. A representative will soon reach out to you.",
-                    "Don't Reply <do_not_reply@domain.example>",
-                    [form.cleaned_data['email']],
-                    fail_silently=False,
-                )
+                "Thank You For Choosing Prairie Code LLC",
+                "Hello, We Appreciate you for reaching out to us. A representative will soon reach out to you.",
+                "Don't Reply <do_not_reply@domain.example>",
+                [form.cleaned_data['email']],
+                fail_silently=False,
+            )
 
             plaintext = get_template("email/admin_confirmation.txt")
             content = ({
-                    'user': form.cleaned_data['name'],
-                    'email': form.cleaned_data['email'],
-                    'details': form.cleaned_data['details']
-                })
+                'user': form.cleaned_data['name'],
+                'email': form.cleaned_data['email'],
+                'details': form.cleaned_data['details']
+            })
 
             text_content = plaintext.render(content)
 
-
-            msg = EmailMultiAlternatives("A New Quote Has Been Created", text_content, "Don't Reply <do_not_reply@domain.example>", ['prairiecodellc@gmail.com'])
+            msg = EmailMultiAlternatives("A New Quote Has Been Created",
+                                         text_content,
+                                         "Don't Reply <do_not_reply@domain.example>",
+                                         ['prairiecodellc@gmail.com'])
             msg.send()
 
             form = quoteForm()
