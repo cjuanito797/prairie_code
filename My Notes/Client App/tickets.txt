@@ -1,0 +1,6 @@
+So one of the things that I have in mind for Prairie Code, is to create a
+ticketing system so that clients may login to our application and submit a
+ticket for work that may need done on their website. This will immensely add to
+the sophistication and the professionalism of our application.
+
+So at

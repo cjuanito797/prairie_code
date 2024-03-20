@@ -1,0 +1,12 @@
+So one of the things that I need to begin adding to all of my websites that I
+engineer would be that of a re-captcha. Specifically v3, where the user does not
+need to worry about entering text presented to them in a squiggly format or
+have to worry about clicking all the images for the traffic lights.
+
+This can definitely be something that we can make a YouTube video about. So we
+need to add the widget to our HTML code, and in our view we need to add the
+python logic in order to validate the form, with the recaptcha in play.
+
+Also because we are linking our domain name, this might not be something we may
+be able to test in production.
+
